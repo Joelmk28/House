@@ -1041,3 +1041,4 @@ D:\C#\MAUI\House\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stam
 D:\C#\MAUI\House\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
 D:\C#\MAUI\House\obj\Debug\net8.0-android\resizetizer\r\drawable\close.png
 D:\C#\MAUI\House\obj\Debug\net8.0-android\resizetizer\r\drawable\arrow_top.png
+D:\C#\MAUI\House\obj\Debug\net8.0-android\House.sourcelink.json

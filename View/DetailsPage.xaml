@@ -124,13 +124,13 @@
                     <VerticalStackLayout>
                         <VerticalStackLayout x:Name="addressView">
 
-                            <Label Text="{Binding SelectedProperty.Address}"
+                            <Label Text="{Binding SelectedProperty.Address,StringFormat='Address : {0}'}"
                                    TextColor="Black"
                                    FontSize="20"
                                    Opacity="0.5"/>
 
 
-                            <Label Text="{Binding SelectedProperty.Price,StringFormat= '{0:###,###}'}"
+                            <Label Text="{Binding SelectedProperty.Price,StringFormat= '${0:###,###}'}"
                                    TextColor="Black"
                                    FontSize="28"
                                    FontAttributes="Bold"/>

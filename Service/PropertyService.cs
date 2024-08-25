@@ -19,7 +19,8 @@ namespace House.Service
                 Images = new List<string> 
                 { "https://static.cotemaison.fr/medias_11969/w_2048,h_1146,c_crop,x_0,y_51/w_2000,h_1125,c_fill,g_north/v1625148569/un-lieu-de-vacances-ou-les-sens-sont-en-eveil_6128360.jpg",
                     "https://images.prismic.io/travauxlib/4b644e16-4ddf-467c-8e00-9749667c2dcd_Maison%20re%CC%81nove%CC%81e.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=clip&q=80&w=1000&h=667",
-                    "https://static.cotemaison.fr/medias_11969/w_2048,h_1146,c_crop,x_0,y_51/w_2000,h_1125,c_fill,g_north/v1625148569/un-lieu-de-vacances-ou-les-sens-sont-en-eveil_6128360.jpg" }
+                    "https://static.cotemaison.fr/medias_11969/w_2048,h_1146,c_crop,x_0,y_51/w_2000,h_1125,c_fill,g_north/v1625148569/un-lieu-de-vacances-ou-les-sens-sont-en-eveil_6128360.jpg",
+                    "https://img.freepik.com/photos-premium/salon-canape-table-cafe-television_1078211-540989.jpg?size=626&ext=jpg&ga=GA1.2.2110245100.1724468130&semt=ais_hybrid" }
             },
             new Property
             {
@@ -27,7 +28,9 @@ namespace House.Service
                 Address = "456 Oak St",
                 Price = 300000,
                 Images = new List<string> { "https://static.cotemaison.fr/medias_11969/w_2048,h_1146,c_crop,x_0,y_51/w_2000,h_1125,c_fill,g_north/v1625148569/un-lieu-de-vacances-ou-les-sens-sont-en-eveil_6128360.jpg",
-                    "https://www.createursdinterieur.com/static/431ac2dfe5de9c29e00b94aa49006fa9/670dc/cheminee-contemporaine.jpg" }
+                    "https://www.createursdinterieur.com/static/431ac2dfe5de9c29e00b94aa49006fa9/670dc/cheminee-contemporaine.jpg" ,
+                "https://img.freepik.com/photos-gratuite/interieur-du-salon_1048-9888.jpg?size=626&ext=jpg&ga=GA1.1.2110245100.1724468130&semt=ais_hybrid",
+                "https://img.freepik.com/photos-premium/salon-canape-table-television_1078211-551452.jpg?size=626&ext=jpg&ga=GA1.1.2110245100.1724468130&semt=ais_hybrid"}
             },
             new Property
             {
@@ -35,7 +38,8 @@ namespace House.Service
                 Address = "789 Pine St",
                 Price = 275000M,
                 Images = new List<string> { "https://images.prismic.io/travauxlib/0e9aa37c-8960-4ff0-8203-bd0a8bf3f068_prix-construction-maison-neuve.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=clip&q=80&rect=0%2C0%2C1950%2C1200&w=1946&h=1198", 
-                    "https://static.cotemaison.fr/medias_11969/w_2048,h_1146,c_crop,x_0,y_51/w_2000,h_1125,c_fill,g_north/v1625148569/un-lieu-de-vacances-ou-les-sens-sont-en-eveil_6128360.jpg", "image8.jpg" }
+                    "https://static.cotemaison.fr/medias_11969/w_2048,h_1146,c_crop,x_0,y_51/w_2000,h_1125,c_fill,g_north/v1625148569/un-lieu-de-vacances-ou-les-sens-sont-en-eveil_6128360.jpg",
+                    "https://img.freepik.com/photos-premium/salon-canape-table-television_1078211-551452.jpg?size=626&ext=jpg&ga=GA1.1.2110245100.1724468130&semt=ais_hybrid" }
             },
             new Property
             {
@@ -69,7 +73,9 @@ namespace House.Service
                 Address = "404 Elm St",
                 Price = 290000M,
                 Images = new List<string> { "https://www.createursdinterieur.com/static/9d7c6db9a95828bd6703bfdb3810971a/670dc/amenagement-interieur-maison-contemporaine.jpg",
-                    "https://www.loghouse.fi/wp-content/uploads/2024/07/Escalier-aito-maison-en-bois-Levi-laponie-finlande-542x780.jpg", "https://cache.marieclaire.fr/data/photo/w1536_ci/61/salon-bleu-er-blanc1.webp" }
+                    "https://www.loghouse.fi/wp-content/uploads/2024/07/Escalier-aito-maison-en-bois-Levi-laponie-finlande-542x780.jpg",
+                    "https://cache.marieclaire.fr/data/photo/w1536_ci/61/salon-bleu-er-blanc1.webp",
+                "https://img.freepik.com/photos-premium/salon-canape-table-cafe-television_1078211-540989.jpg?size=626&ext=jpg&ga=GA1.2.2110245100.1724468130&semt=ais_hybrid"}
             },
             new Property
             {
@@ -77,7 +83,9 @@ namespace House.Service
                 Address = "505 Walnut St",
                 Price = 360000,
                 Images = new List<string> { "https://www.maisons-mca.com/wp-content/uploads/modele-maison-contemporaine.jpg",
-                    "https://images.prismic.io/travauxlib/4b644e16-4ddf-467c-8e00-9749667c2dcd_Maison%20re%CC%81nove%CC%81e.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=clip&q=80&w=1000&h=667" }
+                    "https://images.prismic.io/travauxlib/4b644e16-4ddf-467c-8e00-9749667c2dcd_Maison%20re%CC%81nove%CC%81e.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=clip&q=80&w=1000&h=667",
+                "https://img.freepik.com/photos-gratuite/interieur-du-salon_1048-9888.jpg?size=626&ext=jpg&ga=GA1.1.2110245100.1724468130&semt=ais_hybrid",
+                "https://img.freepik.com/photos-premium/illustration-interieur-du-salon_252025-221276.jpg?size=626&ext=jpg&ga=GA1.2.2110245100.1724468130&semt=ais_hybrid"}
             }
         };
     }

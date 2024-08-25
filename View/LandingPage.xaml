@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ctrl="clr-namespace:House.Control"
              x:Class="House.View.LandingPage"
              NavigationPage.HasNavigationBar="False">
 
@@ -167,17 +168,18 @@
                 <DataTemplate>
                     <Grid HeightRequest="210" WidthRequest="160">
                         <VerticalStackLayout Spacing="10">
-                            <Border HeightRequest="160"
+                            
+                            <ctrl:CustomBorder HeightRequest="160"
                                     StrokeThickness="0"
-                                    StrokeShape="RoundRectangle 20">
+                                    >
                                 <Image Source="{Binding DefaultImage}" 
                                        Aspect="AspectFill"
                                        HorizontalOptions="FillAndExpand"
                                        VerticalOptions="FillAndExpand"/>
-                            </Border>
+                            </ctrl:CustomBorder>
 
                             <VerticalStackLayout HorizontalOptions="Center">
-                                <Label Text="{Binding Address}"
+                                <Label Text="{Binding Address,StringFormat='Address : {0:#}'}"
                                        TextColor="Black"
                                        FontSize="12"
                                        Opacity="0.5"
