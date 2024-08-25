@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="House.View.LandingPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style TargetType="Grid">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="Transparent"/>
+                                </VisualState.Setters>
+
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+                
+            </Style>
+            
+            <ControlTemplate x:Key="SelectionHorizontal" >
+                <Border WidthRequest="100"
+                        StrokeShape="RoundRectangle 22"
+                        StrokeThickness="0"
+                        BackgroundColor="#F0F0F1">
+                    <Label x:Name="label" Text="{TemplateBinding Content}"
+                           FontSize="14"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CheckedStates">
+                                <VisualState x:Name="Checked">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="#4C65FF"/>
+                                        <Setter TargetName="label" Property="Label.Opacity" Value="1"/>
+                                        <Setter TargetName="label" Property="Label.TextColor" Value="White"/>
+                                    </VisualState.Setters>
+                                    
+                                </VisualState>
+
+                                <VisualState x:Name="Unchecked">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="#F0F0F1"/>
+                                        <Setter TargetName="label" Property="Label.Opacity" Value="0.6"/>
+                                        <Setter TargetName="label" Property="Label.TextColor" Value="Black"/>
+                                    </VisualState.Setters>
+
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+
+                </Border>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    
+    <Grid RowDefinitions="Auto,Auto,Auto,*"
+          HorizontalOptions="FillAndExpand"
+          VerticalOptions="FillAndExpand" 
+          Padding="10,15"
+          BackgroundColor="#FEFEFE"
+          RowSpacing="32">
+        
+        <Grid Grid.Row="0" 
+              Padding="10,0"
+             HorizontalOptions="FillAndExpand">
+            <VerticalStackLayout VerticalOptions="Center"
+                                 Spacing="5"
+                                 >
+                <Label Text="Bon retour"
+                       TextColor="Black"
+                       Opacity="0.5"
+                       FontSize="12"/>
+
+                <Label Text="Joel!"
+                       TextColor="Black"
+                       FontSize="16"
+                       FontAttributes="Bold"/>
+
+            </VerticalStackLayout>
+            <Border WidthRequest="48" 
+                    HeightRequest="48"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    StrokeShape="RoundRectangle 24"
+                    StrokeThickness="3"
+                    Stroke="#4C65ff">
+
+                <Image Source="joel_profil.jpg"/>
+
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="1"
+              Padding="10,0"
+              RowDefinitions="Auto,Auto,Auto"
+              HorizontalOptions="FillAndExpand"
+              
+              >
+            <Label Text="Kinshasa"
+                   TextColor="Black"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"/>
+            
+            <Image Source="adresse.png"
+                   WidthRequest="25"
+                   HorizontalOptions="End"
+                   VerticalOptions="Center"/>
+            
+            <Line Grid.Row="1" X1="0" X2="1000" Stroke="#F0F0F1"/>
+        </Grid>
+
+        <ScrollView Grid.Row="2"
+                    Orientation="Horizontal"
+                    Padding="10,0"
+                    HorizontalScrollBarVisibility="Never"
+                    
+                    >
+            <HorizontalStackLayout x:Name="SelectionList"
+                                   BindableLayout.ItemsSource="{Binding Sections}"
+                                   Margin="0,20,0,0"
+                                   Spacing="10"
+                                   >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <RadioButton  Content="{Binding .} " ControlTemplate="{StaticResource SelectionHorizontal}"/>
+ 
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+                
+
+            </HorizontalStackLayout>
+            
+            
+        </ScrollView>
+        
+
+        <CollectionView x:Name="colView"
+                        Grid.Row="3"
+                        ItemsSource="{Binding Properties}"
+                        VerticalScrollBarVisibility="Never"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedProperty}"
+                        SelectionChangedCommand="{Binding PropertySelected}">
+            
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 Span="2" 
+                                 HorizontalItemSpacing="20"
+                                 VerticalItemSpacing="20"/> 
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HeightRequest="210" WidthRequest="160">
+                        <VerticalStackLayout Spacing="10">
+                            <Border HeightRequest="160"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 20">
+                                <Image Source="{Binding DefaultImage}" 
+                                       Aspect="AspectFill"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand"/>
+                            </Border>
+
+                            <VerticalStackLayout HorizontalOptions="Center">
+                                <Label Text="{Binding Address}"
+                                       TextColor="Black"
+                                       FontSize="12"
+                                       Opacity="0.5"
+                                       />
+
+                                <Label Text="{Binding Price,StringFormat='${0:###,###}'}"
+                                       TextColor="Black"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       />
+                            </VerticalStackLayout>
+                            
+                        </VerticalStackLayout>
+                        
+                    </Grid>
+                </DataTemplate>
+                
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+        
+        
+        
+        
+        
+    </Grid>
+    
+</ContentPage>
